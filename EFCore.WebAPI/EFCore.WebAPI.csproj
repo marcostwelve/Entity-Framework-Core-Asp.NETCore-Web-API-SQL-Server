@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EFCore.Domain\EFCore.Domain.csproj" />
+    <ProjectReference Include="..\EFCore.Repo\EFCore.Repo.csproj" />
+  </ItemGroup>
+
 </Project>
