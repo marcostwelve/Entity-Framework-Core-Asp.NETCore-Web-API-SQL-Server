@@ -65,7 +65,7 @@ namespace EFCore.WebAPI.Controllers
             {
                 _repo.Add(batalha);
 
-                if(await _repo.SavaCHangeAsync())
+                if(await _repo.SaveChangeAsync())
                 {
                     return Ok("Bazinga");
                 }
@@ -89,7 +89,7 @@ namespace EFCore.WebAPI.Controllers
                 if (heroi != null)
                 {
                     _repo.Update(batalha);
-                    if (await _repo.SavaCHangeAsync())
+                    if (await _repo.SaveChangeAsync())
                     {
                         return Ok("Bazinga");
                     }
@@ -113,7 +113,7 @@ namespace EFCore.WebAPI.Controllers
                 if(heroi != null)
                 {
                     _repo.Delete(heroi);
-                    if(await _repo.SavaCHangeAsync())
+                    if(await _repo.SaveChangeAsync())
                     {
                         return Ok("Bazinga");
                     }

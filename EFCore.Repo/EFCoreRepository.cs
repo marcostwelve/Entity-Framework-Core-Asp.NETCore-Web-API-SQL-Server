@@ -28,7 +28,7 @@ namespace EFCore.Repo
             _context.Remove(entity);
         }
 
-        public async Task<bool> SavaCHangeAsync()
+        public async Task<bool> SaveChangeAsync()
         {
             return  (await _context.SaveChangesAsync()) > 0;
         }

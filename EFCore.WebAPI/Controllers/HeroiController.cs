@@ -68,7 +68,7 @@ namespace EFCore.WebAPI.Controllers
             try
             {
                 _repo.Add(heroi);
-                if(await _repo.SavaCHangeAsync())
+                if(await _repo.SaveChangeAsync())
                 {
                     return Ok("Bazinga");
 
@@ -93,7 +93,7 @@ namespace EFCore.WebAPI.Controllers
                 {
                     heroiBanco.Nome = heroi.Nome;
                     _repo.Update(heroiBanco);
-                    await _repo.SavaCHangeAsync();
+                    await _repo.SaveChangeAsync();
                     return Ok("Bazinga");
 
                 }
@@ -117,7 +117,7 @@ namespace EFCore.WebAPI.Controllers
                 if (heroiBanco != null)
                 {
                     _repo.Delete(heroiBanco);
-                    await _repo.SavaCHangeAsync();
+                    await _repo.SaveChangeAsync();
                     return Ok("Bazinga");
                 }
                 return Ok("Não encontrado");

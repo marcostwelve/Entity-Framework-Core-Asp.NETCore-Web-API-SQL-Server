@@ -14,7 +14,7 @@ namespace EFCore.Repo
 
         void Delete<T>(T entity) where T : class;
 
-        Task<bool> SavaCHangeAsync();
+        Task<bool> SaveChangeAsync();
 
         Task<Heroi[]> GetAllHerois(bool incluirBatalha = false);
 
